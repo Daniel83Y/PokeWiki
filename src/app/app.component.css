@@ -1,0 +1,115 @@
+User .evo {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    background-color: rgb(206, 204, 201);
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.cute {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(206, 204, 201);
+    border-style: solid;
+    border-color: rgb(204, 0, 255);
+    border-width: 5px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.stats {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    background-color: rgb(206, 204, 201);
+}
+
+.info {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.BodyPokemon {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    background-color: rgb(206, 204, 201);
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    border-radius: 10px;
+    padding: 10px;
+
+
+}
+
+.caption {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    color: black;
+    text-align: center;
+    background-color: rgb(206, 204, 201);
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.header-bool {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    background-color: rgb(206, 204, 201);
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.BodyPokemon img {
+    max-width: 300px;
+    /* Set the maximum width */
+    max-height: 300px;
+    /* Set the maximum height */
+}
+.card {
+    background-color: #f5f5f5; /* Light grey background for Pokemon cards */
+    border: 1px solid #eb0606; /* Grey border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    margin-bottom: 20px; /* Bottom margin between cards */
+}
+.name-confirmed {
+    border: 2px solid red;
+    /* Or whatever border style you prefer */
+}
+.searchbar {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    background-color: rgb(206, 204, 201);
+}
+
+.error-searchbar {
+    color: #eb0606;
+    /* Set text color to red for error condition */
+}
