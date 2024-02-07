@@ -1,3 +1,5 @@
+<h1 *ngIf="title">{{ title }}</h1>
+
 <table #pokemonTable>
   <caption class="caption">
     Pokemon Wiki
@@ -15,7 +17,6 @@
         />
         <button (click)="confirmSearch()">Search</button>
         <div *ngIf="searchError" class="error-message error-searchbar">
-          <!-- Add error-searchbar class here -->
           Error: Pokemon not found!
         </div>
       </th>

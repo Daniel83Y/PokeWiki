@@ -1,6 +1,6 @@
+import { FormsModule } from '@angular/forms'; 
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { NgIf } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+
 interface Pokemon {
   id: number;
   name: string;
@@ -24,7 +24,8 @@ interface Pokemon {
 })
 export class AppComponent {
   @ViewChild('pokemonTable') pokemonTable!: ElementRef;
-  title = 'POKEMON';
+  title = 'my-app';
+
   pokemons: Pokemon[] = [
     {
       id: 1,
