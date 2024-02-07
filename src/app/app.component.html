@@ -1,79 +1,64 @@
-<h1 *ngIf="title">{{ title }}</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css"> <!-- Assuming your CSS file is named styles.css -->
+</head>
+<body>
+  <h1 *ngIf="title">{{ title }}</h1>
 
-<table #pokemonTable>
-  <caption class="caption">
-    Pokemon Wiki
-  </caption>
-  <thead class="header-bool">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <tr>
-      <th colspan="10">
-        <label class="searchbar" for="search">Search a Pokemon by name:</label>
-        <input
-          id="search"
-          type="text"
-          [(ngModel)]="pokemonName"
-          (keyup.enter)="confirmSearch()"
-          [class.name-confirmed]="isSearchConfirmed && !searchError"
-        />
-        <button (click)="confirmSearch()">Search</button>
-        <div *ngIf="searchError" class="error-message error-searchbar">
-          Error: Pokemon not found!
-        </div>
-      </th>
-    </tr>
-    <tr>
-      <th colspan="10">
-        <label class="searchbar" for="sort">Sort by:</label>
-        <select
-          id="sort"
-          [(ngModel)]="selectedSortOption"
-          (change)="onSortChange($event)"
-        >
-          <option value="id">Index</option>
-          <option value="name">Name</option>
-          <option value="type">Type</option>
-        </select>
-      </th>
-    </tr>
-    <tr>
-      <th>Index</th>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Image</th>
-      <th>Description</th>
-      <th>Stats</th>
-      <th>Evolution?</th>
-      <th>Cute?</th>
-    </tr>
-  </thead>
-  <tbody class="BodyPokemon">
-    <tr
-      *ngFor="let pokemon of pokemons; let i = index"
-      id="pokemon-{{ pokemon.id }}"
-    >
-      <td>{{ pokemon.id }}</td>
-      <td [class.name-confirmed]="isSearchedPokemon(pokemon)">
-        {{ pokemon.name }}
-      </td>
-      <td>{{ pokemon.type }}</td>
-      <td><img [src]="pokemon.image" [alt]="pokemon.name" /></td>
-      <td class="info">{{ pokemon.description }}</td>
-      <td class="stats">
-        <div>
-          <strong>Stats:</strong>
-          <br />
-          HP: {{ pokemon.stats.hp }},
-          <br />
-          Attack: {{ pokemon.stats.attack }},
-          <br />
-          Defense: {{ pokemon.stats.defense }},
-          <br />
-          Speed: {{ pokemon.stats.speed }}
-        </div>
-      </td>
-      <td [class.evo]="pokemon.canEvolve">{{ pokemon.canEvolve }}</td>
-      <td [class.cute]="pokemon.isCute">{{ pokemon.isCute }}</td>
-    </tr>
-  </tbody>
-</table>
+  <table #pokemonTable>
+    <caption class="caption">
+      Pokemon Wiki
+    </caption>
+    <thead class="header-bool">
+      <tr>
+        <th colspan="10">
+          <label class="searchbar" for="search">Search a Pokemon by name:</label>
+          <input
+            id="search"
+            type="text"
+            [(ngModel)]="pokemonName"
+            (keyup.enter)="confirmSearch()"
+            [class.name-confirmed]="isSearchConfirmed && !searchError"
+          />
+          <button (click)="confirmSearch()">Search</button>
+          <div *ngIf="searchError" class="error-message error-searchbar">
+            Error: Pokemon not found!
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <th colspan="10">
+          <label class="searchbar" for="sort">Sort by:</label>
+          <select
+            id="sort"
+            [(ngModel)]="selectedSortOption"
+            (change)="onSortChange($event)"
+          >
+            <option value="id">Index</option>
+            <option value="name">Name</option>
+            <option value="type">Type</option>
+          </select>
+        </th>
+      </tr>
+      <tr>
+        <th>Index</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Image</th>
+        <th>Description</th>
+        <th>Stats</th>
+        <th>Evolution?</th>
+        <th>Cute?</th>
+      </tr>
+    </thead>
+    <tbody class="BodyPokemon">
+      <tr *ngFor="let pokemon of pokemons; let i = index" id="pokemon-{{ pokemon.id }}">
+        <td>{{ pokemon.id }}</td>
+        <td [class.name-confirmed]="isSearchedPokemon(pokemon)">{{ pokemon.name }}</td>
+        <td>{{ pokemon.type }}</td>
+        <td><img [src]="pokemon.image" [alt]="pokemon.name" /></td>
+        <td class="info">{{ pokemon.description }}</
