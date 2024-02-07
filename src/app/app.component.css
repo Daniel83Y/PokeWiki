@@ -115,7 +115,7 @@ User .evo {
 }
 @media screen and (max-width: 600px) {
 
-    /* Adjust font size and padding for elements */
+    /* Small screens */
     .evo,
     .cute,
     .stats,
@@ -128,9 +128,50 @@ User .evo {
         padding: 5px;
     }
 
-    /* Adjust image size for smaller screens */
     .BodyPokemon img {
         max-width: 200px;
         max-height: 200px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+
+    /* Medium screens */
+    .evo,
+    .cute,
+    .stats,
+    .info,
+    .BodyPokemon,
+    .caption,
+    .header-bool,
+    .searchbar {
+        font-size: 25px;
+        padding: 7px;
+    }
+
+    .BodyPokemon img {
+        max-width: 250px;
+        max-height: 250px;
+    }
+}
+
+@media screen and (min-width: 901px) {
+
+    /* Large screens */
+    .evo,
+    .cute,
+    .stats,
+    .info,
+    .BodyPokemon,
+    .caption,
+    .header-bool,
+    .searchbar {
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    .BodyPokemon img {
+        max-width: 300px;
+        max-height: 300px;
     }
 }
