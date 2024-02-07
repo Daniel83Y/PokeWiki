@@ -113,3 +113,24 @@ User .evo {
     color: #eb0606;
     /* Set text color to red for error condition */
 }
+@media screen and (max-width: 600px) {
+
+    /* Adjust font size and padding for elements */
+    .evo,
+    .cute,
+    .stats,
+    .info,
+    .BodyPokemon,
+    .caption,
+    .header-bool,
+    .searchbar {
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    /* Adjust image size for smaller screens */
+    .BodyPokemon img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
