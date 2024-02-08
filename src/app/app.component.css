@@ -1,136 +1,135 @@
-User .evo {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 30px;
-    color: black;
-    text-align: center;
-    background-color: rgb(206, 204, 201);
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
-    border-radius: 10px;
-    padding: 10px;
-
+/* Apply modern design system and mobile-first approach */
+.pokemon-wiki {
+    font-family: 'Pokemon Solid', sans-serif;
+    padding: 20px;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Horizontally center the content */
 }
 
-.cute {
-    color: rgb(0, 0, 0);
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    text-align: center;
-    background-color: rgb(206, 204, 201);
-    border-style: solid;
-    border-color: rgb(204, 0, 255);
-    border-width: 5px;
-    border-radius: 10px;
-    padding: 10px;
+h2 {
+    color: #000000;
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-.stats {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 25px;
-    color: black;
-    text-align: center;
-    background-color: rgb(206, 204, 201);
+.pokeball {
+    width: 100px;
+    height: auto;
+    margin-left: 10px;
+    /* Adjust as needed to bring the Pokeball closer */
 }
 
-.info {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 30px;
-    color: black;
-    text-align: center;
-    padding: 10px;
-
+.search-bar,
+.sort-by {
+    margin-bottom: 15px;
 }
 
-.BodyPokemon {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 30px;
-    color: black;
-    text-align: center;
-    background-color: rgb(206, 204, 201);
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
-    border-radius: 10px;
-    padding: 10px;
-
-
+.search-bar label,
+.sort-by label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    /* Text color for labels */
 }
 
-.caption {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 50px;
-    color: black;
-    text-align: center;
-    background-color: rgb(206, 204, 201);
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
-    border-radius: 10px;
-    padding: 10px;
+.search-bar input,
+.sort-by select {
+    width: calc(30%);
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #6b6b6b;
+    /* Add border to input and select */
+    border-radius: 4px;
+    /* Add border radius for a softer look */
 }
 
-.header-bool {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 30px;
-    color: black;
-    text-align: center;
-    background-color: rgb(206, 204, 201);
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
-    border-radius: 10px;
-    padding: 10px;
+.search-bar button {
+    padding: 8px 20px;
+    background-color: rgb(78, 3, 78);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    /* Add border radius to button */
 }
 
-.BodyPokemon img {
-    max-width: 300px;
-    /* Set the maximum width */
-    max-height: 300px;
-    /* Set the maximum height */
-}
-.card {
-    background-color: #f5f5f5; /* Light grey background for Pokemon cards */
-    border: 1px solid #eb0606; /* Grey border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 20px; /* Padding inside the card */
-    margin-bottom: 20px; /* Bottom margin between cards */
-}
-.name-confirmed {
-    border: 2px solid red;
-    /* Or whatever border style you prefer */
-}
-.searchbar {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 30px;
-    color: black;
-    text-align: center;
-    background-color: rgb(206, 204, 201);
+.error-message {
+    color: #6d0202;
+    margin-top: 5px;
 }
 
-.error-searchbar {
-    color: #eb0606;
-    /* Set text color to red for error condition */
+.pokemon-list {
+    display: flex;
+    flex-wrap: wrap;
 }
-@media screen and (max-width: 600px) {
 
-    /* Adjust font size and padding for elements */
-    .evo,
-    .cute,
-    .stats,
-    .info,
-    .BodyPokemon,
-    .caption,
-    .header-bool,
-    .searchbar {
-        font-size: 20px;
-        padding: 5px;
+.pokemon-item {
+    width: 100%; /* Set the width to 100% for full width */
+    padding: 15px;
+    box-sizing: border-box; /* Include border and padding in total width and height */
+    border: 1px solid #ffffff;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Set flex direction to column for responsive layout */
+}
+
+.pokemon-details {
+    flex: 1;
+    display: flex;
+    border: 3px solid #6b6b6b;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.pokemon-image {
+    flex: 0 0 30%;
+    margin-right: 15px;
+}
+
+.pokemon-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 4px;
+}
+
+.pokemon-info {
+    flex: 1;
+}
+
+.pokemon-info h2 {
+    margin-top: 0;
+    color: #333;
+    /* Text color for headings */
+}
+
+.pokemon-stats {
+    margin-top: 10px;
+    color: #0d0b9c;
+    
+    /* Text color for stats */
+}
+
+/* Media query for responsiveness */
+/* Media query for responsiveness */
+@media (min-width: 768px) {
+    .pokemon-item {
+        width: 48%;
+        /* Adjust width for responsiveness */
     }
+}
 
-    /* Adjust image size for smaller screens */
-    .BodyPokemon img {
-        max-width: 200px;
-        max-height: 200px;
-    }
+h1 {
+    display: none;
+}
+.pokemon-item.found {
+    border: 5px solid rgb(78, 3, 78);
+    
 }

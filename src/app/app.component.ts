@@ -431,10 +431,9 @@ export class AppComponent {
     );
   }
 
-  scrollToPokemon(id: number) {
-    const pokemonRow = this.pokemonTable.nativeElement.querySelector(
-      `#pokemon-${id}`
-    );
+ scrollToPokemon(id: number) {
+  setTimeout(() => { // Adding a slight delay to ensure DOM is ready
+    const pokemonRow = document.getElementById(`pokemon-${id}`);
     if (pokemonRow) {
       pokemonRow.scrollIntoView({
         behavior: 'smooth',
@@ -442,7 +441,8 @@ export class AppComponent {
         inline: 'nearest',
       });
     }
-  }
+  }, 100); // Adjust the delay as needed
+}
  onSortChange(event: any) {
     switch (this.selectedSortOption) {
       case 'id':
