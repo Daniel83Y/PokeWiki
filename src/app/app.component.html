@@ -41,7 +41,7 @@
           [(ngModel)]="selectedSortOption"
           (change)="onSortChange($event)"
         >
-          <option value="id">Index</option>
+          <option value="id">ID</option>
           <option value="name">Name</option>
           <option value="type">Type</option>
         </select>
@@ -60,7 +60,12 @@
             </div>
             <div class="pokemon-info">
               <h2>{{ pokemon.name }}</h2>
+              <p><strong>ID:</strong> {{ pokemon.id }}</p>
+              <p><strong>Type:</strong> {{ pokemon.type }}</p>
               <p>{{ pokemon.description }}</p>
+              <div *ngIf="pokemon.canEvolve" class="evolution-info">
+                Can evolve into a stronger Pokémon
+              </div>
               <div class="pokemon-stats">
                 <strong>Stats:</strong>
                 <p>
