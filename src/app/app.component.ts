@@ -166,7 +166,7 @@ export class AppComponent {
       name: 'Snorlax',
       type: 'Normal',
       image:
-        'https://archives.bulbagarden.net/media/upload/3/3f/0143Snorlax.png',
+        'https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png',
       description:
         '"Snorlax is a noseless ursid-like Pokémon that has a cream-colored face, hands, and feet, while the rest of its body is teal in color."',
       stats: {
